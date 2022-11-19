@@ -1,0 +1,15 @@
+{
+  "name": "wapassignmentmvc",
+  "version": "1.0.0",
+  "description": "WAP Assignment 13 MVC",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gilbert Muneka Mumbere",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2"
+  }
+}

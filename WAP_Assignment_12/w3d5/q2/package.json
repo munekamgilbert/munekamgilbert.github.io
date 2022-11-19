@@ -1,0 +1,14 @@
+{
+  "name": "wapassignment12",
+  "version": "1.0.0",
+  "description": "WAP Assignment 12",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gilbert Muneka Mumbere",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
