@@ -2,7 +2,7 @@
 const express = require("express");
 const path = require('path');
 const app = express();
-
+//Gilbert Muneka
 let productList = [{id: 1, name: "Laptop", description: "Laptop", price: 500, quantity: 10},
                     {id: 2, name: "Mouse", description: "Mouse", price: 20, quantity: 5},
                     {id: 3, name: "Monitor", description: "Monitor", price: 100, quantity: 4},
