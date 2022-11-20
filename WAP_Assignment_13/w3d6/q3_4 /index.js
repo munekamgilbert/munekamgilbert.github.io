@@ -1,20 +1,19 @@
-
+//Gilbert Muneka Mumbere
 const express = require("express");
 const path = require('path');
 const app = express();
-//Gilbert Muneka
-let productList = [{id: 1, name: "Laptop", description: "Laptop", price: 500, quantity: 10},
-                    {id: 2, name: "Mouse", description: "Mouse", price: 20, quantity: 5},
-                    {id: 3, name: "Monitor", description: "Monitor", price: 100, quantity: 4},
-                    {id: 4, name: "Iphone", description: "Iphone", price: 800, quantity: 4},
-                    {id: 5, name: "Macbook", description: "Macbook", price: 1000, quantity: 15},
-                    {id: 6, name: "Ipad", description: "Ipad", price: 700, quantity: 6}];
+
+let productList =  [{id: 1, name: "iPhone", description: "Apple iPhone 13 Pro Max - 128 GB - Graphite", price: 700, quantity: 70},
+                    {id: 2, name: "Smart Watch", description: "Fitbit Versa 2 Smartwatch", price: 200, quantity: 9},
+                    {id: 3, name: "Wireless Headphones", description: "Sennheiser HD 450BT Wireless Headphones - Black", price: 100, quantity: 4},
+                    {id: 4, name: "Macbook", description: "Macbook Air 13'' Laptop - Apple M1 Chip - 16Gb Memory - 1Tb Ssd - Space Gray", price: 800, quantity: 4},
+                    {id: 5, name: "Mac Mini", description: "Mac Mini - 3.0GHz Intel Core i5 - 8GB Ram - 256GB SSD - Apple", price: 1000, quantity: 15},
+                    {id: 6, name: "Eye Glasses", description: "Eye Glasses", price: 700, quantity: 6}];
 
 let shoppingCart = new Map();
 
 //middleware
 app.use(express.urlencoded({extended:true}));
-
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'view'));
 
@@ -35,7 +34,7 @@ app.post('/addToCart', (req, res) => {
     let item = productList.find(e => e.name === name && e.quantity > 0);
 
     if(item){
-        //if item is already in shopping cart
+        //Checking to see if item is already in shopping cart
         if(shoppingCart.has(name)){
             let item = shoppingCart.get(name);
             item.quantity ++;
@@ -45,7 +44,6 @@ app.post('/addToCart', (req, res) => {
             shoppingCart.set(name, item);
         }
 
-        //decreate avail quantity
         item.quantity --;
 
         res.redirect(303, "/cart");
