@@ -23,7 +23,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/clear', (req, res) => {
-    //clear all cookies in a loop
+  
     for(const item in req.cookies){
         res.clearCookie(item);
     }
