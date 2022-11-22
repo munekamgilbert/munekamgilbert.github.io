@@ -1,0 +1,18 @@
+{
+  "name": "wapassignment14",
+  "version": "1.0.0",
+  "description": "WAP Assignment 14 W3D6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gilbert Muneka Mumbere",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "nodemon": "^2.0.20"
+  }
+}
